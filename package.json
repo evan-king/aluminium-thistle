@@ -1,0 +1,30 @@
+{
+  "name": "aluminium-thistle",
+  "version": "1.0.0",
+  "description": "A programming exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --watch",
+    "coverage": "istanbul cover --report html -x dist/ _mocha -- test/**/*.js",
+    "travis": "istanbul cover --report lcovonly -x dist/ _mocha",
+    "posttravis": "istanbul check-coverage --statements $npm_package_config_min_coverage --branches $npm_package_config_min_coverage --lines $npm_package_config_min_coverage"
+  },
+  "config": {
+    "min_coverage": 90
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evan-king/aluminum-thistle.git"
+  },
+  "author": "Evan King",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evan-king/aluminum-thistle/issues"
+  },
+  "homepage": "https://github.com/evan-king/aluminum-thistle#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0"
+  }
+}
